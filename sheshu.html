@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>test</title>
+		<script type="text/javascript">
+		function add(){
+var txtBxHolder = document.getElementById('txtBoxHolder');
+var newTxtBx = document.createElement('input');
+newTxtBx.type = 'text';
+txtBxHolder.appendChild(newTxtBx);
+}
+
+function remove(){
+var allTxtBxs = document.getElementById('txtBoxHolder').getElementsByTagName('input');
+if(allTxtBxs.length == 0){
+alert('there are no text boxes to remove');
+}
+else{
+document.getElementById('txtBoxHolder').removeChild(allTxtBxs[allTxtBxs.length-1]);
+}
+
+}
+
+</script>
+
+	</head>
+	
+	<body >
+	<input type="button" value="+" onClick="add()">
+	<input type="button" value="-" onClick="remove()">
+	<input type="text" >
+		<div id="txtBoxHolder">
+			
+			
+		</div>
+	</body>
+</html>
